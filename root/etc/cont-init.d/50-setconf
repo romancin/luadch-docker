@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+[[ ! -d /config/cfg ]] && cp -pr /defaults/cfg /config
+[[ ! -d /config/certs ]] && cp -pr /defaults/certs /config
+[[ ! -d /config/log ]] && cp -pr /defaults/log /config
+[[ ! -f /config/certs/cacert.pem ]] && cd /config/certs && ./make_cert.sh
+
+# copy config files/set links etc...
+[[ ! -L /app/cfg ]] && ln -s /config/cfg /app/cfg
+[[ ! -L /app/certs ]] && ln -s /config/certs /app/certs
+[[ ! -L /app/log ]] && ln -s /config/log /app/log
+
+# set perms
+#chown abc:abc -R /config /detach_sess

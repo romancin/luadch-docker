@@ -1,0 +1,16 @@
+version: '2'
+services:
+  luadch_service:
+    image: romancin/luadch:latest
+    container_name: luadch
+    restart: always
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    volumes:
+      - "/share/Container/luadch:/config"
+
+networks:
+  default:
+    external:
+      name: main_network

@@ -1,0 +1,118 @@
+﻿return {
+
+    help_title = "etc_trafficmanager.lua - Operators",
+    help_usage = "[+!#]trafficmanager show settings|blocks",
+    help_desc = "Zeigt die aktuellen Settings | Zeigt eine Liste aller geblockten User und den Blockmode",
+
+    help_title2 = "etc_trafficmanager.lua - Owners",
+    help_usage2 = "[+!#]trafficmanager block <NICK> [<GRUND>] | unblock <NICK>",
+    help_desc2 = "Blockt Downloads ( d ), Uploads ( u ) und Search ( s ) | Unblockt User",
+
+    msg_denied = "Du bist nicht befugt diesen Befehl zu nutzen.",
+    msg_god = "Du bist nicht befugt diesen User zu blocken.",
+    msg_notonline = "Traffic Manager: User ist offline.",
+    msg_notfound = "Traffic Manager: Dieser User wird nicht geblockt.",
+    msg_stillblocked = "Traffic Manager: Das Level dieses Users wird bereits automatisch geblockt.",
+    msg_isbot = "Traffic Manager: User ist ein Bot.",
+    msg_block = "Traffic Manager: Block user: %s  |  Grund: %s",
+    msg_unblock = "Traffic Manager: Unblock user: %s",
+    msg_op_report_block = "Traffic Manager:  %s  hat folgenden User geblockt: %s  |  Grund: %s",
+    msg_op_report_unblock = "Traffic Manager:  %s  hob den Block von folgendem User auf: %s",
+    msg_autoblock = "Traffic Manager: User wird durch spezifische Skriptberechtigungen geblockt.",
+    msg_onsearch = "Traffic Manager: Deine Suchfunktion ist deaktiviert.",
+    msg_unknown = "unbekannt",
+    msg_reason = "Grund:",
+    msg_blocked_by = "Geblockt von:",
+    msg_target_block = "Traffic Manager: Du wurdest geblockt von: %s  |  Grund: %s",
+    msg_target_unblock = "Traffic Manager: Dein Block wurde aufgehoben von: %s",
+
+    ucmd_menu_ct1_1 = { "Hub", "etc", "Traffic Manager", "zeige", "Einstellungen" },
+    ucmd_menu_ct1_2 = { "Hub", "etc", "Traffic Manager", "zeige", "geblockte User" },
+    ucmd_menu_ct2_1 = { "Traffic Manager", "block" },
+    ucmd_menu_ct2_3 = { "Traffic Manager", "unblock" },
+    ucmd_desc = "Grund (optional):",
+
+    report_msg = [[
+
+
+=== TRAFFIC MANAGER =====================================
+
+     Hallo %s, dein Level hier im Hub:  %s [ %s ]
+
+     Downloads, Uploads und Suchanfragen  wurden gesperrt.
+
+===================================== TRAFFIC MANAGER ===
+  ]],
+
+    report_msg_2 = [[
+
+
+=== TRAFFIC MANAGER =====================================
+
+     Hallo %s,
+     deine Sharegrösse erfüllt nicht die Mindestanforderungen:
+
+     Downloads, Uploads und Suchanfragen  wurden gesperrt.
+
+===================================== TRAFFIC MANAGER ===
+  ]],
+
+    report_msg_3 = [[
+
+
+=== TRAFFIC MANAGER =====================================
+
+     Hallo %s, dein Nick steht auf der Blockliste.
+
+     Geblockt von: %s
+     Grund: %s
+
+     Downloads, Uploads und Suchanfragen  wurden gesperrt.
+
+===================================== TRAFFIC MANAGER ===
+  ]],
+
+    opmsg = [[
+
+
+=== TRAFFIC MANAGER =====================================
+
+   Skript ist aktiv:  %s
+   Sende Report zu geblockten Usern beim Login:  %s
+   Sende Report zu geblockten Usern mit Timer:  %s
+
+         Sende zu Main:  %s
+         Sende zu PM:  %s
+
+   Geblockte Levels:
+
+%s
+   Blocke User mit 0 B Share:  %s
+
+===================================== TRAFFIC MANAGER ===
+  ]],
+
+    msg_usage = [[
+
+
+=== TRAFFIC MANAGER ===========================================================
+
+Gebrauch:
+
+ [+!#]trafficmanager block <NICK> [<GRUND>]  -- blockt downloads ( d ), uploads ( u ) und suchfunktion ( s )
+ [+!#]trafficmanager unblock <NICK>  -- unblock user
+ [+!#]trafficmanager show settings  -- zeigt die aktuellen settings von der "cfg/cfg.tbl"
+ [+!#]trafficmanager show blocks  -- zeigt alle geblockten user und ihre blockmodes
+
+=========================================================== TRAFFIC MANAGER ===
+  ]],
+
+    msg_users = [[
+
+
+=== TRAFFIC MANAGER ========================================================================
+%s
+======================================================================== TRAFFIC MANAGER ===
+  ]],
+
+}

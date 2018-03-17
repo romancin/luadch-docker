@@ -1,0 +1,23 @@
+﻿return {
+
+    msg_invalid = "Ungültige Hubanzahl.",
+    msg_max = [[
+
+
+=== USER HUBS CHECK ===================
+
+Du wurdest disconnected weil:
+
+Max User Hubs: %s  |  bei dir: %s
+Max Reg Hubs: %s  |  bei dir: %s
+Max Op Hubs: %s  |  bei dir: %s
+
+Max Hubs: %s  |  bei dir: %s
+
+=================== USER HUBS CHECK ===
+  ]],
+
+    report_msg = "%s wurde für %s Minuten gebannt wegen des überschreitens des Users Hub Limits. Hubs: %s",
+    msg_reason = "Überschreiten des User Hub Limits",
+
+}

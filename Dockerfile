@@ -36,6 +36,7 @@ RUN apk add --no-cache \
  rm -rf /app/cfg && \
  rm -rf /app/log && \
  rm -rf /app/certs && \
+ rm -rf /app/scripts/lang && \
  
 # cleanup
 apk del --purge \

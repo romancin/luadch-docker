@@ -4,6 +4,8 @@ services:
     image: romancin/luadch:latest
     container_name: luadch
     restart: always
+    networks:
+      - default
     ports:
       - "5000:5000"
       - "5001:5001"

@@ -14,12 +14,14 @@ Tested and working on Synology and QNAP, but should work on any x86_64 devices.
 
 Sample run command:
 
+```bash
 docker run -d --name=luadch \
 -e PGID=0 -e PUID=0 -e TZ=Europe/Madrid \
 -p 5000:5000 \
 -p 5001:5001 \
 -v "/share/Container/luadch:/config"
 romancin/luadch:latest
+```
 
 or use 
 

@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM lsiobase/alpine:3.11
 
 MAINTAINER romancin
 
@@ -8,7 +8,7 @@ ARG VERSION
 LABEL build_version="Romancin version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package version
-ARG LUADCHVER="2.19"
+ARG LUADCHVER="2.20"
 
 # install dependencies
 RUN apk add --no-cache \
@@ -30,7 +30,7 @@ RUN apk add --no-cache \
  tar zxvf /app/v$LUADCHVER.tar.gz && \
  rm /app/v$LUADCHVER.tar.gz && \
  cd /app/luadch-$LUADCHVER/ && \
- /app/luadch-$LUADCHVER/compile_with_gcc.sh && \
+ /app/luadch-$LUADCHVER/compile && \
  mv /app/luadch-$LUADCHVER/build_gcc/luadch/* /app/ && \
  rm -rf /app/luadch-$LUADCHVER && \
  rm -rf /app/cfg && \

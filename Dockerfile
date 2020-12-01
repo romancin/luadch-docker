@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.11
+FROM lsiobase/alpine:3.12
 
 MAINTAINER romancin
 
@@ -8,7 +8,7 @@ ARG VERSION
 LABEL build_version="Romancin version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package version
-ARG LUADCHVER="2.20"
+ARG LUADCHVER="2.21"
 
 # install dependencies
 RUN apk add --no-cache \

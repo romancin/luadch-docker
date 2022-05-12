@@ -8,7 +8,7 @@ ARG VERSION
 LABEL build_version="Romancin version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package version
-ARG LUADCHVER="2.22"
+ARG LUADCHVER="2.23"
 
 # install dependencies
 RUN apk add --no-cache \
@@ -37,7 +37,7 @@ RUN apk add --no-cache \
  rm -rf /app/log && \
  rm -rf /app/certs && \
  rm -rf /app/scripts/lang && \
- 
+
 # cleanup
 apk del --purge \
         build-dependencies && \
